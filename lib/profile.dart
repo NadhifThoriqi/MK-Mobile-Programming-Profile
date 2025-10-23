@@ -72,8 +72,8 @@ class ProfileScreen extends StatelessWidget {
   // Widget to create the waterfall background and profile icon placeholder
   Widget _buildHeaderSection(BuildContext context) {
     // You can replace this with an actual NetworkImage or AssetImage
-    const String waterfallImageUrl = 'assets/pemandangan.jpeg';
-    const String userImageUrl = 'assets/user.jpeg';
+    const String waterfallImageUrl = 'assets/bacground.jpeg';
+    const String userImageUrl = 'assets/users.jpeg';
 
     return Stack(
       alignment: Alignment.center,
