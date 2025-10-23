@@ -2,19 +2,29 @@ import 'package:flutter/material.dart';
 import 'package:profile/profile.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const ProfileApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class ProfileApp extends StatelessWidget {
+  const ProfileApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Profile User',
       debugShowCheckedModeBanner: false,
-      home: ProfileApp(),
+      title: 'Profil',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        // Set background color to dark/black to match the image's aesthetic
+        scaffoldBackgroundColor: Colors.black87,
+        // Set text color to white for contrast
+        textTheme: const TextTheme(bodyMedium: TextStyle(color: Colors.white)),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.black,
+          foregroundColor: Colors.white,
+        ),
+      ),
+      home: const ProfileScreen(),
     );
   }
 }
