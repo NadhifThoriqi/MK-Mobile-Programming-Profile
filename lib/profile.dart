@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:profile/homeFile1.dart';
+import 'package:profile/page1.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -36,6 +38,30 @@ class ProfileScreen extends StatelessWidget {
                   _buildProfileRow(label: 'Program Studi', value: programStudi),
                   _buildProfileRow(label: 'Fakultas', value: fakultas),
                   _buildProfileRow(label: 'Angkatan', value: angkatan),
+                  Row( 
+                    children: [
+                      ElevatedButton(
+                        onPressed: () {
+                          // Menumpuk Halaman
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (_)=>HalamaSatu())
+                          );
+                        },
+                        child: Text("Halaman 1"),
+                      ),
+                      ElevatedButton(
+                        onPressed: () {
+                          // Menumpuk Halaman
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (_)=>HalamaDua())
+                          );
+                        },
+                        child: Text("Halaman 2"),
+                      ),
+                    ],
+                  )
                 ],
               ),
             ),
